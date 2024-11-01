@@ -1,3 +1,7 @@
+## Exercises 0.5 and 0.6
+
+#### Single page app diagram & New note in Single page app diagram
+
 ```mermaid
 sequenceDiagram
     participant User
