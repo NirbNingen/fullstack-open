@@ -23,6 +23,4 @@ sequenceDiagram
 
     Note right of Browser: Browser updates the UI with the new note
     Browser-->>User: Note saved and displayed
-
-
 ```
