@@ -1,11 +1,36 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
+import axios from "axios";
 
 const Person = ({ person }) => {
+  const deletePerson = (name, key) => {
+    console.log("Am I reaching here? ", name);
+    const message = `Do you want to delete ${name} ?`;
+    const userConfirmed = confirm(message);
+
+    if (userConfirmed) {
+      console.log(`${name} has been deleted.`);
+      axios
+        .delete(`http://localhost:3001/persons/${key}`)
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.error("There was an error deleting the person!", error);
+        });
+    } else {
+      console.log(`User does not want to delete ${name}`);
+    }
+  };
   return (
     <>
       <p>
         {person.name} {person.number}
+        <Button
+          handleClick={() => deletePerson(person.name, person.id)}
+          text="delete"
+        />
       </p>
     </>
   );
@@ -41,6 +66,14 @@ const PersonForm = ({
   );
 };
 
+const Button = ({ text, handleClick }) => {
+  return (
+    <>
+      <button onClick={handleClick}>{text}</button>
+    </>
+  );
+};
+
 const Persons = ({ filter, matches, persons }) => {
   return (
     <>
@@ -56,7 +89,7 @@ const Persons = ({ filter, matches, persons }) => {
         <div>
           {persons.map((person) => (
             <>
-              <Person key={person.name} person={person} />
+              <Person key={person.id} person={person} />
             </>
           ))}
         </div>
@@ -65,33 +98,69 @@ const Persons = ({ filter, matches, persons }) => {
   );
 };
 
-const App = () => {
-  const [persons, setPersons] = useState([
-    { name: "Arto Hellas", number: "040-123456", id: 1 },
-    { name: "Ada Lovelace", number: "39-44-5323523", id: 2 },
-    { name: "Dan Abramov", number: "12-43-234345", id: 3 },
-    { name: "Mary Poppendieck", number: "39-23-6423122", id: 4 },
-  ]);
+const App = (props) => {
+  const [persons, setPersons] = useState(props.persons);
   const [newName, setNewName] = useState("");
   const [newNumber, setPhonenumber] = useState("");
   const [filter, setFilter] = useState("");
+  const [key, setKey] = useState(props.persons.length + 1);
 
   const addPerson = (event) => {
     event.preventDefault();
     const exists = persons.some((item) => item.name === newName);
-    console.log("value of exists", exists);
+    const updateObject = persons.find((item) => item.name === newName);
 
-    if (exists) {
+    if (exists && updateObject) {
       console.log("I am hitting the condition");
-      return alert(`The name ${newName} already exists in phonebook`);
+      const message = `${newName} is already added in the phonebook, replace the old number with the new one ?`;
+      const userConfirmed = confirm(message);
+      if (userConfirmed) {
+        console.log("Ah you want to update the number");
+        const url = `http://localhost:3001/persons/${updateObject.id}`;
+        console.log("url fetched is:", url);
+
+        const updatePersonObject = {
+          ...updateObject,
+          number: newNumber,
+        };
+        console.log("updated person obj", updatePersonObject);
+        axios
+          .put(url, updatePersonObject)
+          .then((response) => {
+            console.log(response);
+            setPersons(
+              persons.map((person) =>
+                person.id === updateObject.id ? response.data : person
+              )
+            );
+            setNewName("");
+            setPhonenumber("");
+            setKey(key + 1);
+          })
+          .catch((error) => {
+            console.error("There was an error putting the person!", error);
+          });
+      } else {
+        console.log("Aha no changes");
+      }
     } else {
       const personObject = {
         name: newName,
         number: newNumber,
+        id: uuidv4(),
       };
-      setPersons(persons.concat(personObject));
-      setNewName("");
-      setPhonenumber("");
+
+      axios
+        .post("http://localhost:3001/persons", personObject)
+        .then((response) => {
+          setPersons(persons.concat(response.data));
+          setKey(key + 1);
+          setNewName("");
+          setPhonenumber("");
+        })
+        .catch((error) => {
+          console.error("There was an error adding the person!", error);
+        });
     }
   };
 
@@ -131,6 +200,7 @@ const App = () => {
         newNumber={newNumber}
         grabNumber={grabNumber}
       />
+      {console.log("Persons after adding", persons)}
       <h3>Numbers</h3>
       <Persons filter={filter} matches={matches} persons={persons} />
     </div>

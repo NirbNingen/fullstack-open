@@ -1,0 +1,24 @@
+{
+  "persons": [
+    {
+      "name": "Henri Banana",
+      "number": "06246810",
+      "id": "a8ff5fd1-b0fc-4496-bc82-41a9ce52800d"
+    },
+    {
+      "id": "6af84a70-2a61-41a0-826c-26c13f45136b",
+      "name": "Andrzej Lech",
+      "number": "31-678328429"
+    },
+    {
+      "name": "Magdalena Hezlarova",
+      "number": "47-23478294",
+      "id": "530c597c-a1c5-4dee-ba67-c225ee9aadcb"
+    },
+    {
+      "id": "030e4470-31c2-42e1-bfeb-a01134c29851",
+      "name": "Naima Oei",
+      "number": "31-26688923"
+    }
+  ]
+}
