@@ -2,13 +2,13 @@
   "persons": [
     {
       "name": "Henri Banana",
-      "number": "06246810",
+      "number": "0676872398",
       "id": "a8ff5fd1-b0fc-4496-bc82-41a9ce52800d"
     },
     {
       "id": "6af84a70-2a61-41a0-826c-26c13f45136b",
       "name": "Andrzej Lech",
-      "number": "31-678328429"
+      "number": "23478578290"
     },
     {
       "name": "Magdalena Hezlarova",
@@ -18,7 +18,22 @@
     {
       "id": "030e4470-31c2-42e1-bfeb-a01134c29851",
       "name": "Naima Oei",
-      "number": "31-26688923"
+      "number": "7458937589533"
+    },
+    {
+      "id": "a57dc030-bd4a-4d00-a087-de1fa1d4398e",
+      "name": "Georgio Armani",
+      "number": "748972482749"
+    },
+    {
+      "id": "3489f405-a8d0-4ed4-84ed-a638f99ede4d",
+      "name": "Monsieur Kitty",
+      "number": "112"
+    },
+    {
+      "id": "0a3fd72b-217d-484d-85fb-07c63e96246e",
+      "name": "Anne Savage",
+      "number": "24678242920"
     }
   ]
 }
