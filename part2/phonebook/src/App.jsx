@@ -37,7 +37,7 @@ const PersonForm = ({
           value={newNumber}
           onChange={grabNumber}
           required
-          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          pattern="[0-9-]+"
         />
       </div>
       <div>
