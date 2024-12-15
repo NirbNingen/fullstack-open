@@ -23,6 +23,7 @@ const Button = ({ text, onClick }) => {
 };
 
 const CountryView = ({
+  payload,
   matches,
   filter,
   viewClickedCountry,
@@ -69,21 +70,22 @@ const CountryView = ({
               </ul>
 
               <img src={match.flags.png} alt="Flag" />
-              <h2>Weather of {match.capital}</h2>
+              <p>Weather in {match.capitol}</p>
               {weather.temp !== null && <p>temperature: {weather.temp}°C</p>}
-              <p>Weather image</p>
               {weather.icon !== undefined && (
-                <img
-                  src={`https://openweathermap.org/img/wn/${weather.icon}@2x.png`}
-                  alt="Weather icon"
-                />
+                <p>
+                  <img
+                    src={`https://openweathermap.org/img/wn/${weather.icon}@2x.png`}
+                    alt="Weather icon"
+                  />
+                </p>
               )}
-              {weather.wind !== null && <p>wind: {weather.wind}°C</p>}
+              {weather.wind !== null && <p>wind: {weather.wind}/ms</p>}
             </>
           ))}
         </>
       ) : (
-        <></>
+        console.log("")
       )}
       {filter && matches.length > 1 && matches.length && !clicked ? (
         <div>
@@ -117,16 +119,17 @@ const CountryView = ({
                 )}
               </ul>
               <img src={selectedCountry.flags.png} alt="Flag" />
-              <h2>Weather of {selectedCountry.capital}</h2>
+              <p>Weather in {selectedCountry.capitol}</p>
+
               {weather.temp !== null && <p>temperature: {weather.temp}°C</p>}
-              {weather.icon !== null && (
-                <p>
+              <p>
+                {weather.icon !== undefined && (
                   <img
                     src={`https://openweathermap.org/img/wn/${weather.icon}@2x.png`}
                     alt="Weather icon"
                   />
-                </p>
-              )}
+                )}
+              </p>
               {weather.wind !== null && <p>wind: {weather.wind}/ms</p>}
             </>
           </>
@@ -192,6 +195,7 @@ const App = () => {
         {payload.length > 0 && (
           <>
             <CountryView
+              payload={payload}
               filter={filter}
               matches={matches}
               viewClickedCountry={viewClickedCountry}

@@ -2,7 +2,7 @@
 
 const WeatherApi = async ({ match }) => {
   const stringMatch = match[0];
-  const api_key = import.meta.env.api_key;
+  const api_key = import.meta.env.VITE_API_KEY;
 
   const response = await fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${stringMatch}&units=metric&appid=${api_key}`,
