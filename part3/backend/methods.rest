@@ -1,0 +1,19 @@
+GET http://localhost:3001/api/notes
+
+###
+
+
+POST http://localhost:3001/api/notes
+Content-Type: application/json
+
+{
+    "content": "Postman is amazing, but Rest client also great for quick checks but not for ephemoral calls",
+    "important": true
+}
+
+### No content
+
+POST http://localhost:3001/api/notes
+Content-Type: application/json
+
+
