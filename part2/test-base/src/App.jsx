@@ -7,9 +7,7 @@ const Reducer = ({ array }) => {
   return (
     <div>
       <p>Here I will calculate the total of all numbers:</p>
-      <>
         {numberString} = {sumOfAll}
-      </>
     </div>
   );
 };
@@ -18,13 +16,9 @@ const Mapper = ({ array }) => {
   return (
     <div>
       <p>Here I will print a pointed list of my items: </p>
-      <p>
         {array.map((item, index) => (
-          <>
-            <Item item={item} index={index} />
-          </>
+            <Item item={item} index={index} key='1'/>
         ))}
-      </p>
     </div>
   );
 };
@@ -33,9 +27,7 @@ const Item = ({ item, index }) => {
   const colors = ["blue", "pink", "orange", "yellow", "purple"];
   const color = colors[index % colors.length];
   return (
-    <>
       <p style={{ color: color }}>{item}</p>
-    </>
   );
 };
 
