@@ -39,7 +39,7 @@ Content-Type: application/json
 
 POST http://localhost:3001/api/notes
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imp1c3RtYXJpamtlIiwiaWQiOiI2N2RlYzNmMjYyZTFkNTgyMTA3ZjAzYzUiLCJpYXQiOjE3NDI2NTU0NzZ9.SlG5nxaD-cmSp4SOky8_Xq_83VR3duNu3CRZMnupQXI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imp1c3RtYXJpamtlIiwiaWQiOiI2N2VmZTU0YWJmMDFlNDRmOWQ0Y2ZmZWIiLCJpYXQiOjE3NDM3NzUxOTV9.Z9cm9tjn75YkK6ju6ygq28lLI67h_bjl8g8E_c7OcjA
 
 {
     "content": "Marijke knows it all",

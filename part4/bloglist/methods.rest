@@ -3,7 +3,7 @@ GET http://localhost:3003/api/blogs
 
 ### GET one note by id
 
-GET http://localhost:3003/api/blogs/67dd3d53dbae9b98dfef3284
+GET http://localhost:3003/api/blogs/67f0ea1327b3462ba1865f24
 
 
 ### UPDATE new note 
@@ -158,3 +158,16 @@ Content-Type: application/json
 DELETE http://localhost:3003/api/blogs/5a422b891b54a676234d17fa
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hcmlrb25zbyIsImlkIjoiNjdlNjg4NGQyNTY4NmU0OTUyZWZiN2UyIiwiaWF0IjoxNzQzMTY0NDc0fQ.dEK2-Np_en5s0ltI5Y1Sxjka0vpwF8t4ZsDfHtLyALI
+
+
+
+### current request
+POST http://localhost:3003/api/blogs/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imp1c3RtYXJpamtlIiwiaWQiOiI2N2RlZDVjNzlkODNkOGQ4Y2EyMGE4OGYiLCJpYXQiOjE3NDM3NzkzMjF9.hUU4UY9bEsK8rRBRETe2oh9caipjYWCPUA2hjL_cwtg
+
+{
+    "title":"I am starting to like this",
+    "author":"Naïma Oei",
+    "url":"www.nederland.nl"
+    }

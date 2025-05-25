@@ -44,6 +44,12 @@ blogRouter.post(
     const body = request.body;
     const user = request.user;
 
+    if (!user) {
+      return response
+        .status(401)
+        .json({ error: "Unauthorized: No user found" });
+    }
+
     const blog = new Blog({
       title: body.title,
       author: body.author,
