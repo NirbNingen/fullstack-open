@@ -1,0 +1,44 @@
+{
+  "notes": [
+    {
+      "content": "the app state is in redux store",
+      "important": false,
+      "id": "1"
+    },
+    {
+      "content": "state changes are made with actions",
+      "important": false,
+      "id": "2"
+    },
+    {
+      "id": "2251",
+      "content": "New super important note",
+      "important": true
+    },
+    {
+      "id": "4cb4",
+      "content": "Is everything I made unimportant?",
+      "important": false
+    },
+    {
+      "id": "d009",
+      "content": "I am created using a react query with mutation",
+      "important": true
+    },
+    {
+      "id": "a224",
+      "content": "Let's see if i show up",
+      "important": false
+    },
+    {
+      "id": "2b39",
+      "content": "New note",
+      "important": true
+    },
+    {
+      "id": "214e",
+      "content": "Hi I am a new note",
+      "important": true
+    }
+  ]
+}

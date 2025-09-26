@@ -1,0 +1,59 @@
+{
+  "anecdotes": [
+    {
+      "content": "Debugging is like being the detective in a crime movie where you are also",
+      "id": "1",
+      "votes": null
+    },
+    {
+      "content": "If it hurts, do it more often",
+      "id": "47145",
+      "votes": null
+    },
+    {
+      "content": "Adding manpower to a late software project makes it later!",
+      "id": "21149",
+      "votes": null
+    },
+    {
+      "content": "The first 90 percent of the code accounts for the first 10 percent of the development time...The remaining 10 percent of the code accounts for the other 90 percent of the development time.",
+      "id": "69581",
+      "votes": null
+    },
+    {
+      "content": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
+      "id": "36975",
+      "votes": null
+    },
+    {
+      "content": "Premature optimization is the root of all evil.",
+      "id": "25170",
+      "votes": null
+    },
+    {
+      "content": "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.",
+      "id": "98312",
+      "votes": 0
+    },
+    {
+      "id": "c1dd",
+      "content": "I want to be in a json, it feels safer there",
+      "votes": 0
+    },
+    {
+      "id": "7c57",
+      "content": "When I grow up I want to be part of a Java Script Object Notation file",
+      "votes": null
+    },
+    {
+      "id": "6b58",
+      "content": "New anecdote, I want to see a notifiaction for this",
+      "votes": 0
+    },
+    {
+      "id": "44b8",
+      "content": "Nou gaat prima zo",
+      "votes": 0
+    }
+  ]
+}
