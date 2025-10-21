@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 
 const History = ({ allClicks }) => {
@@ -11,14 +12,14 @@ const Button = ({ handleClick, text }) => {
   return <button onClick={handleClick}>{text}</button>;
 };
 
-const App = () => {
+const useClicks = () => {
   const [left, setLeft] = useState(0);
   const [right, setRight] = useState(0);
   const [allClicks, setAll] = useState([]);
 
   const [total, setTotal] = useState(0);
 
-  const handleLeftClick = () => {
+  const leftClick = () => {
     setAll(allClicks.concat("L"));
     const updatedLeft = left + 1;
     setLeft(updatedLeft);
@@ -26,8 +27,7 @@ const App = () => {
 
     setTotal(updatedLeft + right);
   };
-
-  const handleRightClick = () => {
+  const rightClick = () => {
     setAll(allClicks.concat("R"));
     const updatedRight = right + 1;
     setRight(updatedRight);
@@ -35,15 +35,21 @@ const App = () => {
     setTotal(left + updatedRight);
   };
 
+  return { leftClick, rightClick, left, right, total, allClicks };
+};
+
+const App = () => {
+  const clicks = useClicks();
+
   return (
     <div>
-      {left}
-      <Button handleClick={handleLeftClick} text={left} />
-      <Button handleClick={handleRightClick} text={right} />
-      {right}
-      <History allClicks={allClicks} />
+      {clicks.left}
+      <Button handleClick={clicks.leftClick} text="left" />
+      <Button handleClick={clicks.rightClick} text="right" />
+      {clicks.right}
+      <History allClicks={clicks.allClicks} />
 
-      <p>total {total}</p>
+      <p>total {clicks.total}</p>
     </div>
   );
 };

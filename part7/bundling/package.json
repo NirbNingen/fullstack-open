@@ -1,0 +1,28 @@
+{
+  "name": "bundling",
+  "version": "0.0.1",
+  "description": "practicing webpack",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "start": "webpack serve --mode=development",
+    "server": "json-server -p3001 --watch db.json"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.28.4",
+    "@babel/preset-env": "^7.28.3",
+    "@babel/preset-react": "^7.27.1",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  },
+  "dependencies": {
+    "core-js": "^3.46.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "regenerator-runtime": "^0.14.1"
+  }
+}
