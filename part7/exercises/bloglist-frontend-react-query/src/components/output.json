@@ -1,0 +1,86 @@
+[
+  {
+    "user": {
+      "username": "henrifanatik",
+      "name": "Henri Fanatik",
+      "id": "67ded8964f02491b3dde796d"
+    },
+    "title": "Life valuable fruits of desire",
+    "author": "Heinrich Muller",
+    "url": "www.schones-geschichte.de/heinrich/muller",
+    "likes": 14,
+    "id": "680b5a1304b01310c2676de5"
+  },
+  {
+    "user": {
+      "username": "alby",
+      "name": "Alby Smit",
+      "id": "68fb798c8b3508378132452f"
+    },
+    "title": "redux",
+    "author": "Naima Oei",
+    "url": "https://jahoor.nl",
+    "likes": 19,
+    "id": "68fb9184ef4125aeb4cfa5ae"
+  },
+  {
+    "user": {
+      "username": "justmarijke",
+      "name": "Marijke Lust",
+      "id": "67ded5c79d83d8d8ca20a88f"
+    },
+    "title": "Life is Suffering",
+    "author": "Buddha",
+    "url": "https://jahoor.nl",
+    "likes": 15,
+    "id": "6916f1c26a1341dfea5ecf3c"
+  },
+  {
+    "user": {
+      "username": "justmarijke",
+      "name": "Marijke Lust",
+      "id": "67ded5c79d83d8d8ca20a88f"
+    },
+    "title": "Test new blog",
+    "author": "Naima",
+    "url": "www.holland.nl",
+    "likes": 11,
+    "id": "6917353b48356fbe684de568"
+  },
+  {
+    "user": {
+      "username": "justmarijke",
+      "name": "Marijke Lust",
+      "id": "67ded5c79d83d8d8ca20a88f"
+    },
+    "title": "QUERY doe het nou ff joh",
+    "author": "Naima Oei",
+    "url": "https://jahoor.nl",
+    "likes": 1,
+    "id": "6932d13d4f19942aa1f0e54f"
+  },
+  {
+    "user": {
+      "username": "henrifanatik",
+      "name": "Henri Fanatik",
+      "id": "67ded8964f02491b3dde796d"
+    },
+    "title": "Beautiful story Edgar!",
+    "author": "Henri Fanatik",
+    "url": "https://jahoor.nl",
+    "likes": 0,
+    "id": "6932f2a22386c359eb2794e6"
+  },
+  {
+    "user": {
+      "username": "henrifanatik",
+      "name": "Henri Fanatik",
+      "id": "67ded8964f02491b3dde796d"
+    },
+    "title": "Things I don't know as of 2018",
+    "author": "Henri Fanatik",
+    "url": "https://halo.nl",
+    "likes": 0,
+    "id": "6932f3ba2386c359eb2794fa"
+  }
+]

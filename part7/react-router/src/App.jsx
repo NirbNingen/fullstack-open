@@ -47,8 +47,10 @@ const Notes = ({ notes }) => (
         <li key={note.id}>
           <Link to={`/notes/${note.id}`}>{note.content}</Link>
         </li>
+        
       ))}
     </ul>
+
   </div>
 );
 
@@ -128,6 +130,7 @@ const App = () => {
 
   return (
     <div>
+      
       <div>
         <Link style={padding} to="/">
           home
@@ -146,6 +149,7 @@ const App = () => {
           </Link>
         )}
       </div>
+      
       <Routes>
         <Route path="/notes/:id" element={<Note note={note} />} />
         <Route path="/notes" element={<Notes notes={notes} />} />
@@ -160,8 +164,12 @@ const App = () => {
         <br />
         <em>Note app, Department of Computer Science 2022</em>
       </div>
+         <div>
+    </div>
+ 
+
     </div>
   );
-};
+}
 
 export default App;

@@ -53,14 +53,13 @@ export const createAnecdote = (content) => {
 
 export const addVote = (selectedAnecdote) => {
   return async (dispatch) => {
-    dispatch(increaseVote(selectedAnecdote));
     const id = selectedAnecdote.id;
     const newObject = {
       ...selectedAnecdote,
       votes: selectedAnecdote.votes + 1,
     };
 
-    dispatch(increaseVote(newObject));
+    dispatch(increaseVote(id));
     anecdoteService.addVote(id, newObject);
   };
 };
